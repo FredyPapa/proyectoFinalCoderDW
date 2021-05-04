@@ -1,0 +1,732 @@
+@mixin fondoAnuncio($colorFondo) {
+    background-color: $colorFondo;
+}
+
+/* Estilos para el body */
+body{
+    font-family: 'Roboto', sans-serif;
+    color:#26292e;
+    margin:0;
+
+    header{
+        grid-area: header;
+        justify-self: center;
+    }
+
+    section{
+        padding: 30px 50px;
+    }
+
+    footer{
+        grid-area: footer;
+        padding: 30px 50px;
+    }
+
+    h2{
+        color:#502B1C;
+        font-weight: bold;
+        text-align: center;
+        font-size: 36px;
+        margin: 0;
+    }
+    
+    h3{
+        color: #145430;
+        font-weight: bold;
+        margin: 0;
+    }
+    
+    label{
+        max-height: 38px;
+    }
+
+    li, p{
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    form{
+        font-size: 20px;
+        line-height: 2.5;
+    }
+    
+    input, select{
+        min-height: 30px;
+    }
+
+    /* Estilos relacionados al Menú Principal */
+    nav{
+        grid-area: nav;
+        align-self: end;
+        font-size: 20px;
+        background-color: #ffffff;
+        padding-bottom: 0 !important;
+
+        div#navbarNav{
+            ul {
+                list-style: none;
+                font-size:0; /* truco por el uso de inline-block*/
+                text-align: center;
+                margin-bottom: 0px;
+                width: 100%;
+
+                li {
+                    display: inline-block;
+                    width: 25%;
+                    position: relative;
+                    font-size: 25px;
+
+                    a{
+                        color: #502B1C;
+                        text-decoration: none;
+                        font-family: 'Roboto', sans-serif;
+                        display:block;
+                    }
+
+                    a:hover{
+                        color: #145430;
+                        border-bottom: #61CE70 solid 2px;
+                    }
+                }
+
+                li:hover{
+                    background-color: #EDF9D7;
+                }
+            }
+        }
+    }
+
+    /* Estilos relacionados con Grid */
+    #contenedorHome{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas: 
+                            "header nav nav nav"
+                            "banner banner banner banner"
+                            "conoceServicios conoceServicios conoceServicios conoceServicios"
+                            "franjaServicios franjaServicios franjaServicios franjaServicios"
+                            "acercaNosotros acercaNosotros acercaNosotros acercaNosotros"
+                            "footer footer footer footer";
+    }
+
+    #banner{
+        grid-area: banner;
+    }
+
+    #conoceServicios{
+        grid-area: conoceServicios;
+    }
+
+    #franjaServicios{
+        grid-area: franjaServicios;
+    }
+    
+    #acercaNosotros{
+        grid-area: acercaNosotros;
+    }
+
+    #cajaServicios{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    #cajaNosotros{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    #contenedorServicios{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+        grid-template-areas: 
+                            "header nav nav nav"
+                            "banner banner banner banner"
+                            "sitioWeb sitioWeb sitioWeb sitioWeb"
+                            "franjaContacto1 franjaContacto1 franjaContacto1 franjaContacto1"
+                            "comercioElectronico comercioElectronico comercioElectronico comercioElectronico"
+                            "franjaContacto2 franjaContacto2 franjaContacto2 franjaContacto2"
+                            "desarrolloWeb desarrolloWeb desarrolloWeb desarrolloWeb"
+                            "franjaContacto3 franjaContacto3 franjaContacto3 franjaContacto3"
+                            "desarrolloMovil desarrolloMovil desarrolloMovil desarrolloMovil"
+                            "footer footer footer footer";
+    }
+    
+    #franjaContacto1{
+        grid-area: franjaContacto1;
+    }
+    
+    #franjaContacto2{
+        grid-area: franjaContacto2;
+    }
+    
+    #franjaContacto3{
+        grid-area: franjaContacto3;
+    }
+    
+    #sitioWeb{
+        grid-area: sitioWeb;
+    }
+    
+    #comercioElectronico{
+        grid-area: comercioElectronico;
+    }
+    
+    #desarrolloWeb{
+        grid-area: desarrolloWeb;
+    }
+    
+    #desarrolloMovil{
+        grid-area: desarrolloMovil;
+    }
+    
+    #cajaSitioWeb{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    #cajaComercioElectronico{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    #cajaDesarrolloWeb{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    #cajaDesarrolloMovil{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    #contenedorBlog{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+                            "header nav nav nav"
+                            "franjaServicios franjaServicios franjaServicios franjaServicios"
+                            "contenidoBlog contenidoBlog contenidoBlog contenidoBlog"
+                            "footer footer footer footer";
+    }
+    
+    #contenidoBlog{
+        grid-area: contenidoBlog;
+    }
+    
+    #cajaBlog{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    #contenedorArticulo{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+                            "header nav nav nav"
+                            "imagenArticulo imagenArticulo imagenArticulo imagenArticulo"
+                            "cuerpoArticulo cuerpoArticulo cuerpoArticulo cuerpoArticulo"
+                            "footer footer footer footer";
+    }
+    
+    #imagenArticulo{
+        grid-area: imagenArticulo;
+    }
+    
+    #cuerpoArticulo{
+        grid-area: cuerpoArticulo;
+        padding: 10px 50px;
+    }
+    
+    #contenedorContacto{
+        /*background-color: #EDF9D7;*/
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+                            "header nav nav nav"
+                            "franjaServicios franjaServicios franjaServicios franjaServicios"
+                            "imagenContacto imagenContacto cuerpoContacto cuerpoContacto"
+                            "footer footer footer footer";
+    }
+    
+    #imagenContacto{
+        grid-area: imagenContacto;
+    }
+    
+    #cuerpoContacto{
+        grid-area: cuerpoContacto;
+        padding: 20px;
+    }
+
+    .contenidoBanner{
+        padding: 0px;
+        &__slides{
+            border: solid 2px #502B1C;
+        }
+    }
+
+    .contenidoServicio{
+        max-width: 23%;
+        padding: 5px;
+        border:  solid 1px #502B1C;
+        &__img{
+            width: 100%;
+            &:hover{
+                animation-name: escalar;
+                animation-duration: 2s;
+                animation-iteration-count: 1;
+            }
+        }
+        &__titulo{
+            color: #145430;
+        }
+        &__cuerpo{
+            color: #26292e;
+        }
+        &__enlace{
+            display: block;
+            background-color: #C18864;
+            color:#fff;
+            padding: 10px 0;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    }
+
+    .franjaServicios{
+        @include fondoAnuncio(#C2F248);
+        &__contenido{
+            font-size: 42px;
+            font-weight: bold;
+            color:#145430;
+            text-align: center;
+            &__textoResaltado{
+                color:#502B1C;
+                animation-name: colores;
+                animation-duration: 10s;
+                animation-iteration-count: 1;
+            }
+        }
+    }
+    
+    .franjaContacto{
+        @include fondoAnuncio(#F2B948);
+        &__contenido{
+            @extend .franjaServicios__contenido;
+            &__enlace{
+                color:#502B1C;
+            }
+        }
+    }
+
+    .contenidoArticulo{
+        max-width: 30%;
+        padding: 10px;
+        border:  dashed 2px #145430;
+        &__img{
+            width: 100%;
+            &:hover{
+                animation-name: escalar;
+                animation-duration: 2s;
+                animation-iteration-count: 1;
+            }
+        }
+        &__titulo{
+            color: #502B1C;
+        }
+        &__cuerpo{
+            color: #26292e;
+            padding: 10px 0;
+        }
+        &__enlace{
+            display: block;
+            background-color: #145430;
+            color:#fff;
+            padding: 10px 0;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    }
+
+    .cajaServicioIzquierda{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        &__img{
+            max-width: 25%;
+            padding: 10px;
+        }
+        &__contenido{
+            max-width: 65%;
+            padding: 10px;
+        }
+    }
+
+    .cajaServicioDerecha{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        &__img{
+            max-width: 25%;
+            padding: 10px;
+        }
+        &__contenido{
+            max-width: 65%;
+            padding: 10px;
+        }
+    }
+
+    .detalleFooter{
+        background: linear-gradient(to top, #502B1C, #C18864);
+        &__texto{
+            font-size: 36px;
+            color: #ffffff;
+            text-align: center;
+        }
+    }
+   
+    .imagenIzquierda{
+        max-width: 25%;
+        padding: 10px;
+    }
+    
+    .textoDerecha{
+        max-width: 65%;
+        padding: 10px;
+    }
+    
+    .imagenIzquierdaServicio{
+        max-width: 25%;
+        padding: 10px;
+    }
+    
+    .textoDerechaServicio{
+        max-width: 65%;
+        padding: 10px;
+    }
+    
+    .textoIzquierdaServicio{
+        max-width: 65%;
+        padding: 10px;
+    }
+    
+    .imagenDerechaServicio{
+        max-width: 25%;
+        padding: 10px;
+    }
+    
+    /* Estilos de fondo */
+    .fondoVerdeClaro{
+        background-color: #EDF9D7;
+    }
+    
+    .fondoFooter{
+        background: linear-gradient(to top, #502B1C, #C18864);
+    }
+    
+    /* Estilos de texto */
+    .textoAnuncio{
+        font-size: 42px;
+        font-weight: bold;
+        color:#145430;
+        text-align: center;
+    }
+    
+    .textoAnuncioResaltado{
+        color:#502B1C;
+        animation-name: colores;
+        animation-duration: 10s;
+        animation-iteration-count: 1;
+    }
+    
+    .estiloFooter{
+        font-size: 36px;
+        color: #ffffff;
+        text-align: center;
+    }
+    
+    .centrado{
+        text-align: center;
+    }
+    
+    /* Estilos de bloques */
+    .noInterior{
+        padding: 0px;
+    }
+    
+    .anchoCompleto{
+        width: 100%;
+    }
+    
+    .anchoLogo{
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .espacioTitulo{
+        margin-bottom: 20px;
+    }
+    
+    .no-visible{
+        display: none;
+    }
+
+    .tituloArticulo{
+        color:#502B1C;
+        font-weight: bold;
+        text-align: center;
+        font-size: 36px;
+        margin: 0;
+    }
+
+    /*Animaciones*/
+    @keyframes colores{
+        0%{
+            color: #145430;
+        }
+        33%{
+            color: #502B1C;
+        }
+        66%{
+            color: #F2B948;
+        }
+        100%{
+
+        }
+    }
+
+    @keyframes escalar{
+        100%{
+            transform: scale(1.1,1.1);
+        }
+    }
+
+    .imgServicio:hover{
+        animation-name: escalar;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+    }
+
+    /* Estilos para Tablet */
+    @media (max-width: 768px) {
+        section{
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    
+        #contenedorHome{
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto auto auto auto auto auto;
+            grid-template-areas: 
+                                "header"
+                                "nav"
+                                "banner"
+                                "conoceServicios"
+                                "franjaServicios"
+                                "acercaNosotros"
+                                "footer";
+        }
+    
+        .contenidoServicio{
+            max-width: 47%;
+            padding: 10px 5px;
+        }
+    
+        #contenedorBlog{
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto auto auto auto;
+            grid-template-areas: 
+                                "header"
+                                "nav"
+                                "franjaServicios"
+                                "contenidoBlog"
+                                "footer";
+        }
+        
+        .contenidoArticulo{
+            max-width: 48%;
+            padding: 10px 0px;
+        }
+    
+        #contenedorArticulo{
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto auto auto auto;
+            grid-template-areas: 
+                                "header"
+                                "nav"
+                                "imagenArticulo"
+                                "cuerpoArticulo"
+                                "footer";
+        }
+    
+        #frmVideo{
+            width: 100%;
+        }
+    
+        #contenedorContacto{
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto auto auto auto auto;
+            grid-template-areas: 
+                                "header"
+                                "nav"
+                                "franjaServicios"
+                                "imagenContacto"
+                                "cuerpoContacto"
+                                "footer";
+        }
+    
+        /* Estilos de texto */
+        .franjaServicios__contenido{
+            font-size: 22px;
+        }
+
+        .franjaContacto__contenido{
+            font-size: 22px;
+        }
+    
+        /* Estilos deL footer */
+        .detalleFooter__texto{
+            font-size: 22px;
+        }
+    }
+
+    /* Estilos para Celular */
+    @media only screen and ( max-width: 480px){
+        section{
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        #contenedorHome{
+            display: grid; 
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto auto auto auto auto auto;
+            grid-template-areas: 
+                                "header"
+                                "nav"
+                                "banner"
+                                "conoceServicios"
+                                "franjaServicios"
+                                "acercaNosotros"
+                                "footer";
+        }
+
+        .contenidoServicio{
+            max-width: 100%;
+        }
+
+        .imagenIzquierda{
+            max-width: 100%;
+            padding: 5px;
+        }
+        
+        .textoDerecha{
+            max-width: 100%;
+            padding: 5px;
+        }
+
+        #textoNosotros{
+            padding-right: 0px;
+            max-width: 100%;
+        }
+
+        nav{
+            div#navbarNav{
+                ul {
+                    padding:0;
+                    li {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        #contenedorServicios{
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto;
+            grid-template-areas: 
+                                "header"
+                                "nav"
+                                "banner"
+                                "sitioWeb"
+                                "franjaContacto1"
+                                "comercioElectronico"
+                                "franjaContacto2"
+                                "desarrolloWeb"
+                                "franjaContacto3"
+                                "desarrolloMovil"
+                                "footer";
+        }
+
+        .cajaServicioIzquierda__img{
+            max-width: 100%;
+            padding: 10px 5px;
+        }
+        
+        .cajaServicioIzquierda__contenido{
+            max-width: 100%;
+            padding: 10px 5px;
+        }
+        
+        .cajaServicioDerecha__contenido{
+            max-width: 100%;
+            padding: 10px 5px;
+            order: 2;
+        }
+        
+        .cajaServicioDerecha__img{
+            max-width: 100%;
+            padding: 10px 5px;
+            order: 1;
+        }
+
+        .contenidoArticulo{
+            max-width: 100%;
+            padding: 10px;
+        }
+
+        #frmVideo{
+            height: 200px;
+        }
+
+        /* Estilos de texto */
+        .franjaServicios__contenido{
+            font-size: 16px;
+        }
+
+        .franjaContacto__contenido{
+            font-size: 16px;
+        }
+
+        /* Estilos deL footer */
+        .detalleFooter__texto{
+            font-size: 16px;
+        }
+
+        #cuerpoArticulo{
+            padding: 10px;
+        }
+    }
+}
+
+
+
+
+

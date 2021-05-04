@@ -1,0 +1,478 @@
+@charset "UTF-8";
+/* Estilos para el body */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #26292e;
+  margin: 0;
+  /* Estilos relacionados al Menú Principal */
+  /* Estilos relacionados con Grid */
+  /* Estilos de fondo */
+  /* Estilos de texto */
+  /* Estilos de bloques */
+  /*Animaciones*/
+  /* Estilos para Tablet */
+  /* Estilos para Celular */ }
+  body header {
+    grid-area: header;
+    justify-self: center; }
+  body section {
+    padding: 30px 50px; }
+  body footer {
+    grid-area: footer;
+    padding: 30px 50px; }
+  body h2 {
+    color: #502B1C;
+    font-weight: bold;
+    text-align: center;
+    font-size: 36px;
+    margin: 0; }
+  body h3 {
+    color: #145430;
+    font-weight: bold;
+    margin: 0; }
+  body label {
+    max-height: 38px; }
+  body li, body p {
+    line-height: 1.6;
+    margin: 0; }
+  body form {
+    font-size: 20px;
+    line-height: 2.5; }
+  body input, body select {
+    min-height: 30px; }
+  body nav {
+    grid-area: nav;
+    align-self: end;
+    font-size: 20px;
+    background-color: #ffffff;
+    padding-bottom: 0 !important; }
+    body nav div#navbarNav ul {
+      list-style: none;
+      font-size: 0;
+      /* truco por el uso de inline-block*/
+      text-align: center;
+      margin-bottom: 0px;
+      width: 100%; }
+      body nav div#navbarNav ul li {
+        display: inline-block;
+        width: 25%;
+        position: relative;
+        font-size: 25px; }
+        body nav div#navbarNav ul li a {
+          color: #502B1C;
+          text-decoration: none;
+          font-family: 'Roboto', sans-serif;
+          display: block; }
+        body nav div#navbarNav ul li a:hover {
+          color: #145430;
+          border-bottom: #61CE70 solid 2px; }
+      body nav div#navbarNav ul li:hover {
+        background-color: #EDF9D7; }
+  body #contenedorHome {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas: "header nav nav nav"
+ "banner banner banner banner"
+ "conoceServicios conoceServicios conoceServicios conoceServicios"
+ "franjaServicios franjaServicios franjaServicios franjaServicios"
+ "acercaNosotros acercaNosotros acercaNosotros acercaNosotros"
+ "footer footer footer footer"; }
+  body #banner {
+    grid-area: banner; }
+  body #conoceServicios {
+    grid-area: conoceServicios; }
+  body #franjaServicios {
+    grid-area: franjaServicios; }
+  body #acercaNosotros {
+    grid-area: acercaNosotros; }
+  body #cajaServicios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+  body #cajaNosotros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+  body #contenedorServicios {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+    grid-template-areas: "header nav nav nav"
+ "banner banner banner banner"
+ "sitioWeb sitioWeb sitioWeb sitioWeb"
+ "franjaContacto1 franjaContacto1 franjaContacto1 franjaContacto1"
+ "comercioElectronico comercioElectronico comercioElectronico comercioElectronico"
+ "franjaContacto2 franjaContacto2 franjaContacto2 franjaContacto2"
+ "desarrolloWeb desarrolloWeb desarrolloWeb desarrolloWeb"
+ "franjaContacto3 franjaContacto3 franjaContacto3 franjaContacto3"
+ "desarrolloMovil desarrolloMovil desarrolloMovil desarrolloMovil"
+ "footer footer footer footer"; }
+  body #franjaContacto1 {
+    grid-area: franjaContacto1; }
+  body #franjaContacto2 {
+    grid-area: franjaContacto2; }
+  body #franjaContacto3 {
+    grid-area: franjaContacto3; }
+  body #sitioWeb {
+    grid-area: sitioWeb; }
+  body #comercioElectronico {
+    grid-area: comercioElectronico; }
+  body #desarrolloWeb {
+    grid-area: desarrolloWeb; }
+  body #desarrolloMovil {
+    grid-area: desarrolloMovil; }
+  body #cajaSitioWeb {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+  body #cajaComercioElectronico {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+  body #cajaDesarrolloWeb {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+  body #cajaDesarrolloMovil {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+  body #contenedorBlog {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "header nav nav nav"
+ "franjaServicios franjaServicios franjaServicios franjaServicios"
+ "contenidoBlog contenidoBlog contenidoBlog contenidoBlog"
+ "footer footer footer footer"; }
+  body #contenidoBlog {
+    grid-area: contenidoBlog; }
+  body #cajaBlog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+  body #contenedorArticulo {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "header nav nav nav"
+ "imagenArticulo imagenArticulo imagenArticulo imagenArticulo"
+ "cuerpoArticulo cuerpoArticulo cuerpoArticulo cuerpoArticulo"
+ "footer footer footer footer"; }
+  body #imagenArticulo {
+    grid-area: imagenArticulo; }
+  body #cuerpoArticulo {
+    grid-area: cuerpoArticulo;
+    padding: 10px 50px; }
+  body #contenedorContacto {
+    /*background-color: #EDF9D7;*/
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "header nav nav nav"
+ "franjaServicios franjaServicios franjaServicios franjaServicios"
+ "imagenContacto imagenContacto cuerpoContacto cuerpoContacto"
+ "footer footer footer footer"; }
+  body #imagenContacto {
+    grid-area: imagenContacto; }
+  body #cuerpoContacto {
+    grid-area: cuerpoContacto;
+    padding: 20px; }
+  body .contenidoBanner {
+    padding: 0px; }
+    body .contenidoBanner__slides {
+      border: solid 2px #502B1C; }
+  body .contenidoServicio {
+    max-width: 23%;
+    padding: 5px;
+    border: solid 1px #502B1C; }
+    body .contenidoServicio__img {
+      width: 100%; }
+      body .contenidoServicio__img:hover {
+        animation-name: escalar;
+        animation-duration: 2s;
+        animation-iteration-count: 1; }
+    body .contenidoServicio__titulo {
+      color: #145430; }
+    body .contenidoServicio__cuerpo {
+      color: #26292e; }
+    body .contenidoServicio__enlace {
+      display: block;
+      background-color: #C18864;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold; }
+  body .franjaServicios {
+    background-color: #C2F248; }
+    body .franjaServicios__contenido, body .franjaContacto__contenido {
+      font-size: 42px;
+      font-weight: bold;
+      color: #145430;
+      text-align: center; }
+      body .franjaServicios__contenido__textoResaltado {
+        color: #502B1C;
+        animation-name: colores;
+        animation-duration: 10s;
+        animation-iteration-count: 1; }
+  body .franjaContacto {
+    background-color: #F2B948; }
+    body .franjaContacto__contenido__enlace {
+      color: #502B1C; }
+  body .contenidoArticulo {
+    max-width: 30%;
+    padding: 10px;
+    border: dashed 2px #145430; }
+    body .contenidoArticulo__img {
+      width: 100%; }
+      body .contenidoArticulo__img:hover {
+        animation-name: escalar;
+        animation-duration: 2s;
+        animation-iteration-count: 1; }
+    body .contenidoArticulo__titulo {
+      color: #502B1C; }
+    body .contenidoArticulo__cuerpo {
+      color: #26292e;
+      padding: 10px 0; }
+    body .contenidoArticulo__enlace {
+      display: block;
+      background-color: #145430;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold; }
+  body .cajaServicioIzquierda {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    body .cajaServicioIzquierda__img {
+      max-width: 25%;
+      padding: 10px; }
+    body .cajaServicioIzquierda__contenido {
+      max-width: 65%;
+      padding: 10px; }
+  body .cajaServicioDerecha {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    body .cajaServicioDerecha__img {
+      max-width: 25%;
+      padding: 10px; }
+    body .cajaServicioDerecha__contenido {
+      max-width: 65%;
+      padding: 10px; }
+  body .detalleFooter {
+    background: linear-gradient(to top, #502B1C, #C18864); }
+    body .detalleFooter__texto {
+      font-size: 36px;
+      color: #ffffff;
+      text-align: center; }
+  body .imagenIzquierda {
+    max-width: 25%;
+    padding: 10px; }
+  body .textoDerecha {
+    max-width: 65%;
+    padding: 10px; }
+  body .imagenIzquierdaServicio {
+    max-width: 25%;
+    padding: 10px; }
+  body .textoDerechaServicio {
+    max-width: 65%;
+    padding: 10px; }
+  body .textoIzquierdaServicio {
+    max-width: 65%;
+    padding: 10px; }
+  body .imagenDerechaServicio {
+    max-width: 25%;
+    padding: 10px; }
+  body .fondoVerdeClaro {
+    background-color: #EDF9D7; }
+  body .fondoFooter {
+    background: linear-gradient(to top, #502B1C, #C18864); }
+  body .textoAnuncio {
+    font-size: 42px;
+    font-weight: bold;
+    color: #145430;
+    text-align: center; }
+  body .textoAnuncioResaltado {
+    color: #502B1C;
+    animation-name: colores;
+    animation-duration: 10s;
+    animation-iteration-count: 1; }
+  body .estiloFooter {
+    font-size: 36px;
+    color: #ffffff;
+    text-align: center; }
+  body .centrado {
+    text-align: center; }
+  body .noInterior {
+    padding: 0px; }
+  body .anchoCompleto {
+    width: 100%; }
+  body .anchoLogo {
+    width: 100%;
+    max-width: 300px; }
+  body .espacioTitulo {
+    margin-bottom: 20px; }
+  body .no-visible {
+    display: none; }
+  body .tituloArticulo {
+    color: #502B1C;
+    font-weight: bold;
+    text-align: center;
+    font-size: 36px;
+    margin: 0; }
+
+@keyframes colores {
+  0% {
+    color: #145430; }
+  33% {
+    color: #502B1C; }
+  66% {
+    color: #F2B948; }
+  100% { } }
+
+@keyframes escalar {
+  100% {
+    transform: scale(1.1, 1.1); } }
+  body .imgServicio:hover {
+    animation-name: escalar;
+    animation-duration: 2s;
+    animation-iteration-count: 1; }
+  @media (max-width: 768px) {
+    body {
+      /* Estilos de texto */
+      /* Estilos deL footer */ }
+      body section {
+        padding-left: 0px;
+        padding-right: 0px; }
+      body #contenedorHome {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto auto auto auto;
+        grid-template-areas: "header"
+ "nav"
+ "banner"
+ "conoceServicios"
+ "franjaServicios"
+ "acercaNosotros"
+ "footer"; }
+      body .contenidoServicio {
+        max-width: 47%;
+        padding: 10px 5px; }
+      body #contenedorBlog {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: "header"
+ "nav"
+ "franjaServicios"
+ "contenidoBlog"
+ "footer"; }
+      body .contenidoArticulo {
+        max-width: 48%;
+        padding: 10px 0px; }
+      body #contenedorArticulo {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: "header"
+ "nav"
+ "imagenArticulo"
+ "cuerpoArticulo"
+ "footer"; }
+      body #frmVideo {
+        width: 100%; }
+      body #contenedorContacto {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas: "header"
+ "nav"
+ "franjaServicios"
+ "imagenContacto"
+ "cuerpoContacto"
+ "footer"; }
+      body .franjaServicios__contenido, body .franjaContacto__contenido {
+        font-size: 22px; }
+      body .franjaContacto__contenido {
+        font-size: 22px; }
+      body .detalleFooter__texto {
+        font-size: 22px; } }
+  @media only screen and (max-width: 480px) {
+    body {
+      /* Estilos de texto */
+      /* Estilos deL footer */ }
+      body section {
+        padding-left: 0px;
+        padding-right: 0px; }
+      body #contenedorHome {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto auto auto auto;
+        grid-template-areas: "header"
+ "nav"
+ "banner"
+ "conoceServicios"
+ "franjaServicios"
+ "acercaNosotros"
+ "footer"; }
+      body .contenidoServicio {
+        max-width: 100%; }
+      body .imagenIzquierda {
+        max-width: 100%;
+        padding: 5px; }
+      body .textoDerecha {
+        max-width: 100%;
+        padding: 5px; }
+      body #textoNosotros {
+        padding-right: 0px;
+        max-width: 100%; }
+      body nav div#navbarNav ul {
+        padding: 0; }
+        body nav div#navbarNav ul li {
+          width: 100%; }
+      body #contenedorServicios {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto;
+        grid-template-areas: "header"
+ "nav"
+ "banner"
+ "sitioWeb"
+ "franjaContacto1"
+ "comercioElectronico"
+ "franjaContacto2"
+ "desarrolloWeb"
+ "franjaContacto3"
+ "desarrolloMovil"
+ "footer"; }
+      body .cajaServicioIzquierda__img {
+        max-width: 100%;
+        padding: 10px 5px; }
+      body .cajaServicioIzquierda__contenido {
+        max-width: 100%;
+        padding: 10px 5px; }
+      body .cajaServicioDerecha__contenido {
+        max-width: 100%;
+        padding: 10px 5px;
+        order: 2; }
+      body .cajaServicioDerecha__img {
+        max-width: 100%;
+        padding: 10px 5px;
+        order: 1; }
+      body .contenidoArticulo {
+        max-width: 100%;
+        padding: 10px; }
+      body #frmVideo {
+        height: 200px; }
+      body .franjaServicios__contenido, body .franjaContacto__contenido {
+        font-size: 16px; }
+      body .franjaContacto__contenido {
+        font-size: 16px; }
+      body .detalleFooter__texto {
+        font-size: 16px; }
+      body #cuerpoArticulo {
+        padding: 10px; } }
